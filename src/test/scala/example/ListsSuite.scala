@@ -128,6 +128,10 @@ import org.scalatest.junit.JUnitRunner
     assert(sum(List(-1, 2)) === 1)
   }
 
+  test("sum of a list with repeated zeros") {
+    assert(sum(List(0, 0, 0)) === 0)
+  }
+
   test("max of a few numbers") {
     assert(max(List(3, 7, 2)) === 7)
   }
@@ -138,6 +142,10 @@ import org.scalatest.junit.JUnitRunner
 
   test("max of a list with negatives ") {
     assert(max(List(-1, -5, -3, -2, 1, -6)) === 1)
+  }
+
+  test("max of a list with repeated elements ") {
+    assert(max(List(1, 1, 1)) === 1)
   }
 
   test("max of an empty list") {
